@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promissória PDF</title>
+  <link rel="stylesheet" href="/styles/global.css">
+  <link rel="stylesheet" href="/styles/pages/print.css" />
+  <link rel="stylesheet" href="/styles/partials/forms.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <div style="border: 2px solid black; padding:2px; margin:5px; width:100%; height:100%">
+      <div class="container">
+        <div class="input-group flex">
+
+          <div class="input-wrapper" style="width:40%">
+            <input type=" text" disabled name="promissoryNumber" id="promissoryNumber"
+              value="<%=data.promissoryNumber %>" style="padding-left:50px">
+            <span><b>Nº</b></span>
+          </div>
+
+          <div class="input-wrapper" style="width:100%">
+            <input style="text-align: center;" type=" text" disabled value="<%= data.dueDate %>">
+            <span style="font-size:12px"><b>VENCIMENTO</b></span>
+          </div>
+
+          <div class="input-wrapper" style="width:50%">
+            <input type="text" name="promissoryValue" value="<%= data.promissoryValue %>" style="padding-left:50px">
+            <span>R$</span>
+
+          </div>
+        </div>
+
+
+        <div class="input-group">
+          <div class="input-wrapper flex" style="width:100%">
+            <span>Ao(s)</span>
+            <input type="text" name="dueDateEx" id="dueDateEx" value="<%= data.dueDateInFull %>">
+          </div>
+        </div>
+
+        <div class="input-group" style="font-size:1.8rem">
+          <div id="info">
+            <p>Pagaremos por está única via de nota promissória ao <b>Sr. <%= data.takerName %>, CPF:
+                  <%= data.takerCpf %> </b>
+              a quantia de <b class="markupText">
+                <%= data.promissoryValueInFull %>
+              </b> em moeda corrente deste país, pagável em Belém do Pará.</p>
+          </div>
+        </div>
+
+        <div class="input-group flex" style="font-size:1.8rem">
+          <p style="margin-right: 5px;"><b>Emitente:</b></p>
+
+          <div class="input-wrapper">
+            <input type="text" disabled value="<%= data.issuerName %>">
+          </div>
+
+          <div class="input-wrapper">
+            <input type="text" disabled value="<%= data.issuerCpf %>" style="padding-left: 60px;">
+            <span style="font-size:1rem;"><b>CPF:</b></span>
+          </div>
+        </div>
+
+        <div class="input-group flex" style="font-size:1.8rem; margin-top: 0;">
+          <p style="margin-right: 5px;"><b>Emitente:</b></p>
+
+          <div class="input-wrapper">
+            <input type="text" disabled value="<%= data.issuerName %>">
+          </div>
+
+          <div class="input-wrapper">
+            <input type="text" disabled value="<%= data.issuerCpf %>" style="padding-left: 60px;">
+            <span style="font-size:1rem;"><b>CPF:</b></span>
+          </div>
+        </div>
+
+        <div class="input-group flex" style="align-items: center;">
+          <div class="input-wrapper flex" style="width: auto">
+            <b>Data de Emissão:</b>
+            <span class="markupText" style="padding: 8px;">
+              <%= data.isseuDate%>
+            </span>
+          </div>
+          <div class="input-wrapper flex" style="width: auto">
+            <b>Endereço:</b>
+            <span class="markupText" style="padding: 8px;">
+              <%= data.address %>
+            </span>
+          </div>
+        </div>
+
+        <div class="input-group flex" style="justify-content: space-between;">
+          <div class="signature">
+            <span><b>Assinatura do emitente conforme RG</b></span>
+          </div>
+          <div class="signature">
+            <span><b>Assinatura do emitente conforme RG</b></span>
+          </div>
+        </div>
+
+        <img id="backgroundImg" src="/images/brasao.png" alt="brasão">
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <div style="border: 2px solid black; padding:2px; margin:5px; width:100%; height:100%">
+      <div class="container">
+        <div class="input-group flex">
+
+          <div class="input-wrapper" style="width:40%">
+            <input type=" text" disabled name="promissoryNumber" id="promissoryNumber"
+              value="<%=data.promissoryNumber %>" style="padding-left:50px">
+            <span><b>Nº</b></span>
+          </div>
+
+          <div class="input-wrapper" style="width:100%">
+            <input style="text-align: center;" type=" text" disabled value="<%= data.dueDate %>">
+            <span style="font-size:12px"><b>VENCIMENTO</b></span>
+          </div>
+
+          <div class="input-wrapper" style="width:50%">
+            <input type="text" name="promissoryValue" value="<%= data.promissoryValue %>" style="padding-left:50px">
+            <span>R$</span>
+
+          </div>
+        </div>
+
+
+        <div class="input-group">
+          <div class="input-wrapper flex" style="width:100%">
+            <span>Ao(s)</span>
+            <input type="text" name="dueDateEx" id="dueDateEx" value="<%= data.dueDateInFull %>">
+          </div>
+        </div>
+
+        <div class="input-group" style="font-size:1.8rem">
+          <div id="info">
+            <p>Pagaremos por está única via de nota promissória ao <b>Sr. <%= data.takerName %>, CPF:
+                  <%= data.takerCpf %> </b>
+              a quantia de <b class="markupText">
+                <%= data.promissoryValueInFull %>
+              </b> em moeda corrente deste país, pagável em Belém do Pará.</p>
+          </div>
+        </div>
+
+        <div class="input-group flex" style="font-size:1.8rem">
+          <p style="margin-right: 5px;"><b>Emitente:</b></p>
+
+          <div class="input-wrapper">
+            <input type="text" disabled value="<%= data.issuerName %>">
+          </div>
+
+          <div class="input-wrapper">
+            <input type="text" disabled value="<%= data.issuerCpf %>" style="padding-left: 60px;">
+            <span style="font-size:1rem;"><b>CPF:</b></span>
+          </div>
+        </div>
+
+        <div class="input-group flex" style="font-size:1.8rem; margin-top: 0;">
+          <p style="margin-right: 5px;"><b>Emitente:</b></p>
+
+          <div class="input-wrapper">
+            <input type="text" disabled value="<%= data.issuerName %>">
+          </div>
+
+          <div class="input-wrapper">
+            <input type="text" disabled value="<%= data.issuerCpf %>" style="padding-left: 60px;">
+            <span style="font-size:1rem;"><b>CPF:</b></span>
+          </div>
+        </div>
+
+        <div class="input-group flex" style="align-items: center;">
+          <div class="input-wrapper flex" style="width: auto">
+            <b>Data de Emissão:</b>
+            <span class="markupText" style="padding: 8px;">
+              <%= data.isseuDate%>
+            </span>
+          </div>
+          <div class="input-wrapper flex" style="width: 300px">
+            <b>Endereço:</b>
+            <span class="markupText" style="padding: 8px;">
+              <%= data.address %>
+            </span>
+          </div>
+        </div>
+
+        <div class="input-group flex" style="justify-content: space-between;">
+          <div class="signature">
+            <span><b>Assinatura do emitente conforme RG</b></span>
+          </div>
+          <div class="signature">
+            <span><b>Assinatura do emitente conforme RG</b></span>
+          </div>
+        </div>
+
+        <img id="backgroundImg" src="/images/brasao.png" alt="brasão">
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>

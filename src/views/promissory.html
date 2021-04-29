@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="/styles/partials/page-header.css" />
+  <link rel="stylesheet" href="/styles/partials/cards.css" />
+  <link rel="stylesheet" href="/styles/partials/buttons.css" />
+  <link rel="stylesheet" href="/styles/partials/forms.css" />
+  <link rel="stylesheet" href="/styles/partials/animations.css" />
+  <link rel="stylesheet" href="/styles/pages/promissory.css" />
+</head>
+
+<body id="page-promissory">
+  <%- include('parts/page-header.html', {title: 'Adicionar Nova Promissória' }) %>
+
+    <div class="container flex animate-up delay-2" style="padding-bottom: 50px;">
+      <main>
+        <form id="form-promissory" method="POST">
+          <fieldset>
+            <legend>Dados de Promissória</legend>
+            <div class="separator light"></div>
+
+            <div class="input-group">
+              <div class="input-wrapper">
+                <label for="promissoryNumber">Qual número identificador de Promissória?</label>
+                <input type="text" name="promissoryNumber" id="promissoryNumber" />
+              </div>
+
+              <div class="input-wrapper">
+                <label for="promissoryValue">Qual o valor em Reais?</label>
+                <input type="text" name="promissoryValue" id="promissoryValue" />
+              </div>
+            </div>
+
+            <div class="input-group">
+              <div class="input-wrapper">
+                <label for="dueDate">Qual o dia do Vencimento?</label>
+                <input type="text" name="dueDate" id="dueDate" />
+              </div>
+
+              <div class="input-wrapper">
+                <label for="dueDateInFull">Qual dia do vencimento por extenso?</label>
+                <input type="text" name="dueDateInFull" id="dueDateInFull" />
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Dados de Tomador</legend>
+            <div class="separator light"></div>
+
+            <div class="input-group">
+              <div class="input-wrapper">
+                <label for="takerName">Qual nome de quem vai receber?</label>
+                <input type="text" name="takerName" id="takerName" />
+              </div>
+
+              <div class="input-wrapper">
+                <label for="takerName">Qual CPF de quem vai receber?</label>
+                <input type="text" name="takerCpf" id="takerCpf" />
+              </div>
+            </div>
+
+            <div class="input-group">
+              <div class="input-wrapper">
+                <label for="promissoryValueInFull">Qual a quantia, por extenso?</label>
+                <input type="text" name="promissoryValueInFull" id="promissoryValueInFull" />
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Dados de Emitente</legend>
+            <div class="separator light"></div>
+            <div class="input-group">
+              <div class="input-wrapper">
+                <label for="issuerName">Qual o nome do Emitente?</label>
+                <input type="text" name="issuerName" id="issuerName" />
+              </div>
+
+              <div class="input-wrapper">
+                <label for="issuerName">Qual o CPF do emitente?</label>
+                <input type="text" name="issuerCpf" id="issuerCpf" />
+              </div>
+            </div>
+
+            <div class="input-group">
+              <div class="input-wrapper">
+                <label for="issuerName2">Qual o nome do Emitente?</label>
+                <input type="text" name="issuerName2" id="issuerName2" />
+              </div>
+
+              <div class="input-wrapper">
+                <label for="issuerCpf2">Qual o CPF do emitente?</label>
+                <input type="text" name="issuerCpf2" id="issuerCpf2" />
+              </div>
+            </div>
+
+
+            <div class="input-group">
+              <div class="input-wrapper">
+                <label for="isseuDate">Qual a data de emissão?</label>
+                <input type="text" name="isseuDate" id="isseuDate" />
+              </div>
+
+              <div class="input-wrapper">
+                <label for="address">Qual o endereço do emitente?</label>
+                <input type="text" name="address" id="address" />
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </main>
+      <aside class="card">
+        <img src="/images/money-color.svg" alt="Imagem de Dinheiro">
+        <p>
+          Preencha dos dados ao lado para poder criar uma promissória
+        </p>
+        <div class="button-group">
+          <button class="button green" form="form-promissory" type="submit" title="Salvar Dados">Salvar</button>
+          <a href="/print/pdf?target='https://google.com'" class="button gray">
+            <img src="/images/trash-24.svg" alt="Cancelar cadastro" title="Cancelar cadastro">
+          </a>
+        </div>
+      </aside>
+    </div>
+
+
+</body>
+
+</html>

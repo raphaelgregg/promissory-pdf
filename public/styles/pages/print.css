@@ -1,0 +1,91 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+
+  border: 5px var(--color-save) solid;
+  margin: 20px;
+}
+
+.container {
+  position: relative;
+  border: 1px solid var(--color-save);
+  width: 100%;
+  height: 100%;
+  padding: 5px 10px;
+  color: black;
+}
+
+#backgroundImg {
+  /* display: none; */
+  position: absolute;
+  top: 0;
+  left: 23.75rem;
+  width: 30rem;
+  object-position: center;
+  object-fit: cover;
+  opacity: 0.2;
+}
+
+.input-group {
+  font-size: 1.25rem;
+}
+
+.input-group + .input-group {
+  margin-top: 10px;
+}
+
+.input-wrapper {
+  position: relative;
+  font-size: 1.8rem;
+}
+
+.input-wrapper input {
+  padding: 0 10px;
+  width: 100%;
+  height: 40px;
+  background: var(--color-input-background-pdf);
+  border: 1px solid var(--color-hairline-in-dark);
+  border-radius: 0;
+  font-size: 1.5rem;
+  color: black;
+}
+
+.input-wrapper {
+  align-items: center;
+}
+
+.input-wrapper input ~ span {
+  position: absolute;
+  top: 6px;
+  left: 10px;
+}
+
+.input-wrapper span ~ input {
+  margin-left: 10px;
+}
+
+.input-group .input-wrapper + .input-wrapper {
+  /* margin-top: 20px; */
+}
+
+#info {
+  text-align: justify;
+}
+
+.markupText {
+  margin-right: 4px;
+  border: 1px solid var(--color-hairline-in-dark);
+  background-color: var(--color-input-background-pdf);
+  padding: 2px;
+}
+
+.grid {
+  display: grid;
+}
+
+.signature {
+  background: var(--color-input-background-pdf);
+  border: 1px solid var(--color-hairline-in-dark);
+  width: 100%;
+  height: 140px;
+}

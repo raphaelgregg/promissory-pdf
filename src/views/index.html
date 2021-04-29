@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promissory Generator</title>
+
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="/styles/partials/page-header.css" />
+  <link rel="stylesheet" href="/styles/partials/buttons.css" />
+  <link rel="stylesheet" href="/styles/partials/forms.css" />
+  <link rel="stylesheet" href="/styles/partials/cards.css" />
+  <link rel="stylesheet" href="styles/pages/index.css">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <script src="/scripts/index.js" defer type="module"></script>
+</head>
+
+<body>
+  <header class="page-header">
+    <div class="container">
+      <section id="top" class="animate-up">
+        <h2 class="sr-only">Homepage</h2>
+        <img id="logo" src="/images/cash.svg" alt="Logo" />
+        <span id="notification">
+          <img src="/images/alert-octagon.svg" alt="Alerta" />
+
+          <!-- Você não tem horas livres -->
+
+          Você tem 0 horas livres no seu dia
+        </span>
+        <a href="/profile" id="avatar-profile">
+          <p>
+            Raphael <span>Ver perfil</span>
+          </p>
+          <img
+            src="https://avatars.githubusercontent.com/u/18744233?s=400&u=2c0d2200c4e0785ecf918aaf1ee85d15d62e06f2&v=4" />
+        </a>
+      </section>
+
+      <div class="separator"></div>
+
+      <section id="summary" class="animate-up delay-1">
+        <h2 class="sr-only">Sumário</h2>
+
+        <div class="info">
+          <div class="total">
+            <strong>
+              3
+            </strong>
+            Projetos ao total
+          </div>
+          <div class="in-progress">
+            <strong>
+              2
+            </strong>
+            Em andamento
+          </div>
+          <div class="finished">
+            <strong>
+              1
+            </strong>
+            Encerrados
+          </div>
+        </div>
+        <a class="button orange" href="/promissory">
+          <span>
+            <img src="/images/plus-24.svg" alt="Novo Job" />
+          </span>
+          Adicionar nova promissória
+        </a>
+      </section>
+    </div>
+  </header>
+
+  <div class="container">
+    <main class="animate-up delay-2">
+      <h1 class="sr-only">Trabalhos</h1>
+
+      <div class="cards">
+
+        <% bd.forEach((promissory)=> { %>
+
+          <div class="card " data-id="<%= promissory.id %>">
+            <div class="id column">
+              <%= promissory.id %>
+            </div>
+            <div class="name column">
+              <%= promissory.issuerName %>
+            </div>
+            <div class="deadline column">
+              <span>Prazo</span>
+              <p>
+
+                <%= promissory.dueDate %> dias para a pagar
+
+
+              </p>
+            </div>
+            <div class="amount column">
+              <span>Valor</span>
+              <p>R$ <%= promissory.promissoryValue %>
+              </p>
+            </div>
+            <div class="status badge column">
+              Encerrados
+            </div>
+            <div class="actions column flex">
+              <p class="sr-only">Ações</p>
+              <a href="/promissory/<%= promissory.id %>/pdf " class="button white edit" title="Gerar Pdf">
+                <img src="/images/edit-24.svg" alt="Gerar Pdf" />
+              </a>
+              <a href="/promissory/<%= promissory.id %>/ " class="button white edit" title="Editar Job">
+                <img src="/images/edit-24.svg" alt="Editar Job" />
+              </a>
+              <button class="delete button white" title="Excluir Job">
+                <img src="/images/trash-24.svg" alt="Excluir Job" />
+              </button>
+            </div>
+          </div>
+          <!-- end card -->
+
+          <% }) %>
+      </div>
+      <!-- end cards -->
+    </main>
+  </div>
+  <!-- end container -->
+
+</body>
+
+</html>
