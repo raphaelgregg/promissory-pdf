@@ -30,7 +30,7 @@ module.exports = {
 
     await browser.close();
 
-    res.contentType("application/pdf");
+    res.contentType("application/print");
 
     return res.send(pdf);
   },
