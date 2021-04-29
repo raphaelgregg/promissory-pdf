@@ -1,7 +1,3 @@
-const puppeteer = require("puppeteer");
-const ejs = require("ejs");
-const path = require("path");
-
 const promissoryData = [];
 
 module.exports = {
